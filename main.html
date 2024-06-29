@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="main.js"></script>
+    <script>
+        function calculateIntrest(){
+            var init = prompt("What is the principle value?");
+            var rate = prompt("What is the rate (3 = 3%)?");
+            var time = prompt("What is the length of time?");
+            var value = init * (1 + (time*(rate/100)));
+            alert(value);
+        }
+    </script>
+    <h1>Online Simple Intrest Calculator</h1>
+    <button type="button" style="height: 50px; width: 200px; background-color: azure; font-family: cursive;" onclick="calculateIntrest()">Click Me To Start!</button>
+    
+    
+</body>
+</html>

@@ -1,2 +1,2 @@
 # My-Website
-My website, containing testing and me messing with code
+This is a simple intrest calculator to become familiar with JavaScript and HTML!
