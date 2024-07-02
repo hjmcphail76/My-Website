@@ -1,4 +1,3 @@
 # My-Website
-This is a simple intrest calculator to become familiar with JavaScript and HTML!
 
-It contains a simple intrest calculator right now.
+This is my in development pong game project. Just for fun, for me to learn more JavaScript and recall some HTML.
