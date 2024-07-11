@@ -1,5 +1,6 @@
 var playerYVelocity = 0;
-var ballXVelocity = -2;
+var ballXVelocity = 5;
+var ballYVelocity = 0;
 
 var leftPlayerRight;
 var leftPlayerTop;
@@ -58,7 +59,7 @@ function startGame() {
   myGameArea.start();
   leftPlayer = new player(width, height, "black", 100, 500);
   rightPlayer = new player(width, height, "black", 900, 500);
-  object = new ball(40, "red", 500, 500)
+  object = new ball(10, "red", 500, 500)
 }
 
 function player(width, height, color, x, y, rot) {
@@ -114,21 +115,12 @@ function isContacting() {
   ballTop = object.y + object.size;
   ballBottom = object.y - object.size
 
-  if (object.x < 500){ //If it is on the left side of the screen
-    if ((ballLeft < leftPlayerRight) && ((ballTop > leftPlayerBottom) && (ballBottom < leftPlayerTop))) {
-      return true;
-    }
-    return false
+  if (((ballLeft < leftPlayerRight) && (ballLeft > leftPlayerRight-10)) && ((ballTop > leftPlayerBottom) && (ballBottom < leftPlayerTop))) {
+    console.log("bounce on right")
   }
-  else{
-    if ((ballRight < rightPlayerLeft) && ((ballTop > rightPlayerBottom) && (ballBottom < rightPlayerTop))) {
-      return true;
-    }
-    return false
+  if (((ballRight < rightPlayerLeft) && ((ballRight < rightPlayerLeft+10))) && ((ballTop > rightPlayerBottom) && (ballBottom < rightPlayerTop))) {
+    console.log("bounce on left")
   }
-}
-function bounce(){
-  //TODO:
 }
 
 function periodic() {
